@@ -31,7 +31,7 @@ public class MachinesList extends Activity {
         machinesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+
             }
         });
     }
@@ -43,6 +43,7 @@ public class MachinesList extends Activity {
         Log.i("machines", machines.size() + "");
         MachineListAdapter machineListAdapter = new MachineListAdapter(this, R.layout.machine_list_item, machines);
         machinesList.setAdapter(machineListAdapter);
+        machinesList.setEmptyView(findViewById(R.id.empty));
         return true;
     }
 
