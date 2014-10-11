@@ -2,28 +2,47 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:validate="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditText
+    <com.andreabaccega.widget.FormEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:hint="IP Address"
-        android:layout_weight=".5" />
+        android:id="@+id/machineNameET"
+        android:layout_weight=".3"
+        android:hint="@string/hint_machine_name"
+        android:inputType="text"
+        validate:testErrorString="@string/validation_empty" />
 
-    <EditText
+    <com.andreabaccega.widget.FormEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_weight=".5"
-        android:hint="Port Number" />
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/ipAddressET"
+        android:hint="@string/hint_ip_address"
+        android:layout_weight=".3"
+        validate:testType="ipAddress"
+        validate:emptyErrorString="@string/validation_ip_invalid"
+        validate:testErrorString="@string/validation_empty" />
+
+    <com.andreabaccega.widget.FormEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/portNumberET"
+        android:layout_weight=".3"
+        android:hint="@string/hint_port_number"
+        android:numeric="integer"
+        android:inputType="number"
+        validate:testType="numeric"
+        validate:emptyErrorString="@string/validation_port_invalid"
+        validate:testErrorString="@string/validation_empty" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Machine"
         android:id="@+id/button"
-        android:layout_weight="1" />
+        android:layout_weight=".1"
+        android:onClick="addMachine" />
 </LinearLayout>
