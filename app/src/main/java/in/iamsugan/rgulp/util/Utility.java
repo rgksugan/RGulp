@@ -11,9 +11,10 @@ import android.net.NetworkInfo;
 public class Utility {
     // Checks if the network is available
     public boolean isNetworkAvailable() {
-        Application.
-        ConnectivityManager connectivityManager = (ConnectivityManager) Application.getgetSystemService(Application.getC.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null;
+//        Application.
+//        ConnectivityManager connectivityManager = (ConnectivityManager) Application.getgetSystemService(Application.getC.CONNECTIVITY_SERVICE);
+//        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+//        return activeNetworkInfo != null;
+        return true;
     }
 }

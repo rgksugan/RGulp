@@ -10,5 +10,8 @@
     <string name="hint_machine_name">Machine Name</string>
     <string name="hint_ip_address">IP Address</string>
     <string name="hint_port_number">Port Number</string>
+    <string name="title_activity_connect">Connect</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
