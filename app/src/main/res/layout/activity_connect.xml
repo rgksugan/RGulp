@@ -13,4 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <com.andreabaccega.widget.FormEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/userId"
+        android:hint="@string/hint_ip_address"
+        android:layout_weight=".3"/>
+
 </RelativeLayout>

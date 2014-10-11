@@ -17,7 +17,7 @@
     <com.andreabaccega.widget.FormEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:ems="10"
         android:id="@+id/ipAddressET"
         android:hint="@string/hint_ip_address"

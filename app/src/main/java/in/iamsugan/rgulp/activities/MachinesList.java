@@ -31,7 +31,8 @@ public class MachinesList extends Activity {
         machinesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+                Intent addMachineIntent = new Intent(getApplicationContext(), Connect.class);
+                startActivity(addMachineIntent);
             }
         });
     }
