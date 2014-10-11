@@ -1,11 +1,15 @@
 package in.iamsugan.rgulp.models;
 
+import android.os.Parcelable;
+
 import com.orm.SugarRecord;
+
+import java.io.Serializable;
 
 /**
  * Created by sugan on 30/09/14.
  */
-public class Machine extends SugarRecord<Machine> {
+public class Machine extends SugarRecord<Machine> implements Serializable {
     String name;
     String ip;
     int port;

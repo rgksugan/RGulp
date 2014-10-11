@@ -1,24 +1,36 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="in.iamsugan.rgulp.activities.Connect">
-
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    xmlns:validate="http://schemas.android.com/apk/res-auto"
+    tools:context="in.iamsugan.rgulp.activities.Connect"
+    android:orientation="vertical">
 
     <com.andreabaccega.widget.FormEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:id="@+id/userId"
-        android:hint="@string/hint_ip_address"
-        android:layout_weight=".3"/>
+        android:id="@+id/userNameET"
+        android:hint="User Name"
+        android:text="sugan"
+        android:layout_weight=".3"
+        validate:emptyErrorString="@string/validation_empty" />
 
-</RelativeLayout>
+    <com.andreabaccega.widget.FormEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordET"
+        android:layout_weight=".3"
+        android:hint="Password"
+        android:text="sugan"
+        android:inputType="text"
+        validate:emptyErrorString="@string/validation_empty" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/connectBT"
+        android:layout_weight=".1"
+        android:onClick="connect" />
+</LinearLayout>

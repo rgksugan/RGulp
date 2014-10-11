@@ -23,8 +23,8 @@
         android:hint="@string/hint_ip_address"
         android:layout_weight=".3"
         validate:testType="ipAddress"
-        validate:emptyErrorString="@string/validation_ip_invalid"
-        validate:testErrorString="@string/validation_empty" />
+        validate:emptyErrorString="@string/validation_empty"
+        validate:testErrorString="@string/validation_ip_invalid" />
 
     <com.andreabaccega.widget.FormEditText
         android:layout_width="match_parent"
@@ -32,6 +32,7 @@
         android:id="@+id/portNumberET"
         android:layout_weight=".3"
         android:hint="@string/hint_port_number"
+        android:text="22"
         android:numeric="integer"
         android:inputType="number"
         validate:testType="numeric"

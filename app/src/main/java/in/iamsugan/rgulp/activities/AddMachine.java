@@ -8,6 +8,7 @@ import android.view.View;
 import com.andreabaccega.widget.FormEditText;
 
 import in.iamsugan.rgulp.R;
+import in.iamsugan.rgulp.models.Machine;
 
 public class AddMachine extends Activity {
 
@@ -30,9 +31,11 @@ public class AddMachine extends Activity {
 
         if (allValid) {
             Intent machineListIntent = new Intent();
-            machineListIntent.putExtra("name", etMachineName.getText().toString());
-            machineListIntent.putExtra("ip", etIPAddress.getText().toString());
-            machineListIntent.putExtra("port", etPortNumber.getText().toString());
+            Machine machine = new Machine();
+            machine.setName(etMachineName.getText().toString());
+            machine.setIp(etIPAddress.getText().toString());
+            machine.setPort(Integer.parseInt(etPortNumber.getText().toString()));
+            machine.save();
             setResult(RESULT_OK, machineListIntent);
             finish();
         }
