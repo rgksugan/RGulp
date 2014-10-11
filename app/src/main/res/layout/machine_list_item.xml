@@ -17,19 +17,38 @@
         android:layout_weight="1"
         android:focusableInTouchMode="false">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:src="@drawable/machine" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ipAddressTV"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:paddingStart="20dp"
+            android:password="false"
+            android:paddingEnd="20dp"
+            android:height="35dp"
+            android:hint="IP address"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:gravity="center|center_horizontal"
+            android:typeface="sans" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:id="@+id/portNumberTV"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1" />
+            android:height="35dp"
+            android:hint="Port Number"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:gravity="center|fill_horizontal"
+            android:typeface="sans" />
     </LinearLayout>
 
 </LinearLayout>
